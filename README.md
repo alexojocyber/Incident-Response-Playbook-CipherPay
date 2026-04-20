@@ -1,7 +1,7 @@
 # Incident-Response-Playbook-CipherPay
 A professional Incident Response Playbook for a fictional fintech company — CipherPay Ltd. Covers Brute Force, Phishing, and Data Breach incidents mapped to NIST SP 800-61, MITRE ATT&amp;CK, ISO 27001, GDPR and PCI-DSS frameworks.
 
-# 🚨 Incident Response Playbook — CipherPay Ltd
+#  Incident Response Playbook — CipherPay Ltd
 
 **Document Type:** Incident Response Playbook
 **Prepared By:** Alex Ojo — Junior SOC & GRC Analyst
@@ -12,7 +12,7 @@ A professional Incident Response Playbook for a fictional fintech company — Ci
 
 ---
 
-## 📋 Executive Overview
+##  Executive Overview
 
 This Incident Response Playbook has been developed for
 CipherPay Ltd — a remote-first fintech startup providing
@@ -36,7 +36,7 @@ GDPR and PCI-DSS.
 
 ---
 
-## 🎯 Purpose & Objectives
+##  Purpose & Objectives
 
 The objectives of this playbook are to:
 
@@ -53,7 +53,7 @@ The objectives of this playbook are to:
 
 ---
 
-## 📚 Governing Frameworks
+##  Governing Frameworks
 
 This playbook is aligned with the following industry
 standards and frameworks:
@@ -68,7 +68,7 @@ standards and frameworks:
 
 ---
 
-## 🔄 Incident Response Lifecycle
+##  Incident Response Lifecycle
 
 This playbook follows the **NIST SP 800-61** Incident
 Response lifecycle:
@@ -89,7 +89,7 @@ LESSONS LEARNED
 
 ---
 
-## 🚦 Incident Severity Classification
+##  Incident Severity Classification
 
 All incidents must be classified using the following
 severity levels:
@@ -103,7 +103,7 @@ severity levels:
 
 ---
 
-## 👥 Incident Response Team
+##  Incident Response Team
 
 | Role | Responsibility |
 |------|---------------|
@@ -116,7 +116,7 @@ severity levels:
 
 ---
 
-## 📞 Emergency Contact List
+##  Emergency Contact List
 
 | Role | Contact Method | Response Time |
 |------|---------------|---------------|
@@ -128,7 +128,7 @@ severity levels:
 
 ---
 
-## 📁 Related Documents
+##  Related Documents
 
 | Document | Description |
 |----------|-------------|
@@ -140,11 +140,11 @@ severity levels:
 ---
 
 
-## 🔐 Incident Playbook 1 — Brute Force & Credential Attack
+##  Incident Playbook 1 — Brute Force & Credential Attack
 
 ---
 
-### 📌 Incident Overview
+###  Incident Overview
 
 | Field | Details |
 |-------|---------|
@@ -158,7 +158,7 @@ severity levels:
 
 ---
 
-### 🔍 Incident Description
+###  Incident Description
 
 A brute force attack occurs when an attacker repeatedly
 attempts to guess a user's credentials by systematically
@@ -176,7 +176,7 @@ were detected and blocked using Fail2Ban within 5 minutes.
 
 ---
 
-### ⚠️ Indicators of Compromise (IOCs)
+###  Indicators of Compromise (IOCs)
 
 The following indicators suggest a brute force attack
 is in progress or has occurred:
@@ -202,7 +202,7 @@ index=main sourcetype=syslog "Failed password"
 
 ---
 
-### 📊 Attack Timeline Example
+###  Attack Timeline Example
 
 | Time | Event |
 |------|-------|
@@ -215,9 +215,9 @@ index=main sourcetype=syslog "Failed password"
 
 ---
 
-### 🔄 Response Procedures
+###  Response Procedures
 
-#### Phase 1 — Preparation ✅
+#### Phase 1 — Preparation 
 
 **Before an incident occurs, ensure:**
 - [ ] Fail2Ban is installed and configured on all Linux systems
@@ -230,7 +230,7 @@ index=main sourcetype=syslog "Failed password"
 
 ---
 
-#### Phase 2 — Detection & Analysis 🔍
+#### Phase 2 — Detection & Analysis 
 
 **Step 1 — Identify failed login attempts:**
 ```bash
@@ -269,7 +269,7 @@ index=main sourcetype=syslog "Failed password"
 
 ---
 
-#### Phase 3 — Containment 🛡️
+#### Phase 3 — Containment 
 
 **Immediate Actions (0-30 minutes):**
 
@@ -302,7 +302,7 @@ sudo usermod -L username
 
 ---
 
-#### Phase 4 — Eradication 🧹
+#### Phase 4 — Eradication 
 
 - [ ] Identify and remove any backdoors or malware
 - [ ] Reset passwords for all potentially compromised accounts
@@ -314,7 +314,7 @@ sudo usermod -L username
 
 ---
 
-#### Phase 5 — Recovery 🔄
+#### Phase 5 — Recovery 
 
 - [ ] Unlock legitimate user accounts after verification:
 ```bash
@@ -331,7 +331,7 @@ sudo usermod -U username
 
 ---
 
-#### Phase 6 — Lessons Learned 📝
+#### Phase 6 — Lessons Learned 
 
 **Post-Incident Review (within 72 hours):**
 
@@ -345,7 +345,7 @@ sudo usermod -U username
 
 ---
 
-### 📋 Incident Report Template
+###  Incident Report Template
 INCIDENT REPORT — BRUTE FORCE ATTACK
 Date/Time Detected:
 Detected By:
@@ -366,7 +366,7 @@ Date Closed:
 
 ---
 
-### 🗺️ MITRE ATT&CK Mapping
+###  MITRE ATT&CK Mapping
 
 | Tactic | Technique | Description |
 |--------|-----------|-------------|
@@ -377,7 +377,7 @@ Date Closed:
 
 ---
 
-### 🔒 Preventive Controls
+###  Preventive Controls
 
 | Control | Implementation | Framework |
 |---------|---------------|-----------|
@@ -391,11 +391,11 @@ Date Closed:
 
 ---
 
-## 🎣 Incident Playbook 2 — Phishing Attack
+##  Incident Playbook 2 — Phishing Attack
 
 ---
 
-### 📌 Incident Overview
+###  Incident Overview
 
 | Field | Details |
 |-------|---------|
@@ -409,7 +409,7 @@ Date Closed:
 
 ---
 
-### 🔍 Incident Description
+###  Incident Description
 
 A phishing attack occurs when an attacker sends
 fraudulent emails designed to trick CipherPay Ltd
@@ -431,7 +431,7 @@ considerably.
 
 ---
 
-### ⚠️ Indicators of Compromise (IOCs)
+###  Indicators of Compromise (IOCs)
 
 **Email-Based Indicators:**
 - Sender email domain does not match display name
@@ -457,7 +457,7 @@ considerably.
 
 ---
 
-### 📊 Phishing Attack Timeline Example
+###  Phishing Attack Timeline Example
 
 | Time | Event |
 |------|-------|
@@ -472,9 +472,9 @@ considerably.
 
 ---
 
-### 🔄 Response Procedures
+###  Response Procedures
 
-#### Phase 1 — Preparation ✅
+#### Phase 1 — Preparation 
 
 **Before an incident occurs, ensure:**
 - [ ] Email filtering and anti-phishing tools are active
@@ -488,7 +488,7 @@ considerably.
 
 ---
 
-#### Phase 2 — Detection & Analysis 🔍
+#### Phase 2 — Detection & Analysis 
 
 **Step 1 — Collect the suspicious email:**
 - Obtain full email headers from the recipient
@@ -528,7 +528,7 @@ grep username
 
 ---
 
-#### Phase 3 — Containment 🛡️
+#### Phase 3 — Containment 
 
 **Immediate Actions (0-30 minutes):**
 
@@ -556,7 +556,7 @@ sudo passwd username
 
 ---
 
-#### Phase 4 — Eradication 🧹
+#### Phase 4 — Eradication 
 
 - [ ] Remove any malware installed via phishing attachment
 - [ ] Delete any malicious email forwarding rules created
@@ -569,7 +569,7 @@ sudo passwd username
 
 ---
 
-#### Phase 5 — Recovery 🔄
+#### Phase 5 — Recovery 
 
 - [ ] Restore compromised accounts after full verification
 - [ ] Re-enable employee access with new credentials
@@ -586,7 +586,7 @@ index=main sourcetype=syslog
 
 ---
 
-#### Phase 6 — Lessons Learned 📝
+#### Phase 6 — Lessons Learned 
 
 **Post-Incident Review (within 72 hours):**
 
@@ -600,7 +600,7 @@ index=main sourcetype=syslog
 
 ---
 
-### 📋 Incident Report Template
+###  Incident Report Template
 INCIDENT REPORT — PHISHING ATTACK
 Date/Time Detected:
 Detected By:
@@ -623,7 +623,7 @@ Date Closed:
 
 ---
 
-### 🗺️ MITRE ATT&CK Mapping
+###  MITRE ATT&CK Mapping
 
 | Tactic | Technique | Description |
 |--------|-----------|-------------|
@@ -635,7 +635,7 @@ Date Closed:
 
 ---
 
-### 🔒 Preventive Controls
+###  Preventive Controls
 
 | Control | Implementation | Framework |
 |---------|---------------|-----------|
@@ -650,11 +650,11 @@ Date Closed:
 
 ---
 
-## 💾 Incident Playbook 3 — Data Breach & Unauthorised Access
+##  Incident Playbook 3 — Data Breach & Unauthorised Access
 
 ---
 
-### 📌 Incident Overview
+###  Incident Overview
 
 | Field | Details |
 |-------|---------|
@@ -668,7 +668,7 @@ Date Closed:
 
 ---
 
-### 🔍 Incident Description
+###  Incident Description
 
 A data breach occurs when an unauthorised party gains
 access to CipherPay Ltd's sensitive data including
@@ -696,7 +696,7 @@ to PCI-DSS and GDPR regulations.
 
 ---
 
-### ⚠️ Indicators of Compromise (IOCs)
+###  Indicators of Compromise (IOCs)
 
 **System-Based Indicators:**
 - Unusual large data downloads from AWS S3 or RDS
@@ -722,7 +722,7 @@ to PCI-DSS and GDPR regulations.
 
 ---
 
-### 📊 Data Breach Timeline Example
+###  Data Breach Timeline Example
 
 | Time | Event |
 |------|-------|
@@ -740,9 +740,9 @@ to PCI-DSS and GDPR regulations.
 
 ---
 
-### 🔄 Response Procedures
+###  Response Procedures
 
-#### Phase 1 — Preparation ✅
+#### Phase 1 — Preparation 
 
 **Before an incident occurs, ensure:**
 - [ ] AWS S3 Block Public Access is enabled on all buckets
@@ -759,7 +759,7 @@ to PCI-DSS and GDPR regulations.
 
 ---
 
-#### Phase 2 — Detection & Analysis 🔍
+#### Phase 2 — Detection & Analysis 
 
 **Step 1 — Identify unusual data access in Splunk:**
 index=aws sourcetype=cloudtrail
@@ -801,7 +801,7 @@ index=aws sourcetype=s3access
 
 ---
 
-#### Phase 3 — Containment 🛡️
+#### Phase 3 — Containment 
 
 **Immediate Actions (0-60 minutes):**
 
@@ -841,7 +841,7 @@ RestrictPublicBuckets=true"
 
 ---
 
-#### Phase 4 — Eradication 🧹
+#### Phase 4 — Eradication 
 
 - [ ] Remove all unauthorised AWS IAM users and roles
 - [ ] Rotate all AWS access keys and secrets
@@ -856,7 +856,7 @@ RestrictPublicBuckets=true"
 
 ---
 
-#### Phase 5 — Recovery 🔄
+#### Phase 5 — Recovery 
 
 - [ ] Restore systems from clean verified backups
 - [ ] Verify data integrity before restoring to production
@@ -874,7 +874,7 @@ eventName=GetObject
 
 ---
 
-#### Phase 6 — Lessons Learned 📝
+#### Phase 6 — Lessons Learned 
 
 **Post-Incident Review (within 72 hours):**
 
@@ -889,7 +889,7 @@ eventName=GetObject
 
 ---
 
-### 📋 Incident Report Template
+###  Incident Report Template
 INCIDENT REPORT — DATA BREACH
 Date/Time Detected:
 Detected By:
@@ -917,7 +917,7 @@ Date Closed:
 
 ---
 
-### ⚖️ Regulatory Notification Requirements
+###  Regulatory Notification Requirements
 
 **GDPR — Article 33:**
 
@@ -939,7 +939,7 @@ Date Closed:
 
 ---
 
-### 🗺️ MITRE ATT&CK Mapping
+###  MITRE ATT&CK Mapping
 
 | Tactic | Technique | Description |
 |--------|-----------|-------------|
@@ -951,7 +951,7 @@ Date Closed:
 
 ---
 
-### 🔒 Preventive Controls
+###  Preventive Controls
 
 | Control | Implementation | Framework |
 |---------|---------------|-----------|
@@ -967,7 +967,7 @@ Date Closed:
 
 ---
 
-## 📢 Communication Templates
+##  Communication Templates
 
 ---
 
@@ -984,7 +984,7 @@ and customer communications.
 
 ---
 
-### 📧 Template 1 — Internal Incident Alert
+###  Template 1 — Internal Incident Alert
 
 **Purpose:** Notify the internal incident response team
 when an incident is detected.
@@ -1017,7 +1017,7 @@ SOC Analyst — CipherPay Ltd
 
 ---
 
-### 📧 Template 2 — Management Escalation
+###  Template 2 — Management Escalation
 
 **Purpose:** Escalate a P1 Critical incident to senior
 leadership and the board.
@@ -1064,7 +1064,7 @@ Incident Response Lead — CipherPay Ltd
 
 ---
 
-### 📧 Template 3 — GDPR Regulatory Notification
+###  Template 3 — GDPR Regulatory Notification
 
 **Purpose:** Notify the ICO (Information Commissioner's
 Office) of a personal data breach within 72 hours.
@@ -1117,7 +1117,7 @@ Data Protection Officer — CipherPay Ltd
 
 ---
 
-### 📧 Template 4 — Customer Notification
+###  Template 4 — Customer Notification
 
 **Purpose:** Notify affected customers of a data breach
 that may impact their personal or payment data.
@@ -1175,7 +1175,7 @@ Chief Executive Officer — CipherPay Ltd
 
 ---
 
-### 📧 Template 5 — All Staff Security Alert
+###  Template 5 — All Staff Security Alert
 
 **Purpose:** Notify all CipherPay Ltd employees of an
 active incident and provide guidance on what to do.
@@ -1212,7 +1212,7 @@ CipherPay Ltd Security Team
 
 ---
 
-### 📊 Communication Timeline by Severity
+###  Communication Timeline by Severity
 
 | Audience | P1 Critical | P2 High | P3 Medium | P4 Low |
 |----------|-------------|---------|-----------|--------|
@@ -1224,7 +1224,7 @@ CipherPay Ltd Security Team
 
 ---
 
-### ✅ Communication Checklist
+###  Communication Checklist
 
 **During every incident ensure:**
 
@@ -1242,7 +1242,7 @@ CipherPay Ltd Security Team
 
 ---
 
-## 📝 Lessons Learned Framework
+##  Lessons Learned Framework
 
 ---
 
@@ -1260,7 +1260,7 @@ reviewed, documented, and acted upon systematically.
 
 ---
 
-### 🔄 Post-Incident Review Process
+###  Post-Incident Review Process
 
 All incidents must go through a formal post-incident
 review within the following timeframes:
@@ -1274,7 +1274,7 @@ review within the following timeframes:
 
 ---
 
-### 📋 Post-Incident Review Template
+###  Post-Incident Review Template
 POST-INCIDENT REVIEW REPORT
 INCIDENT DETAILS
 Incident ID:          [Auto-generated]
@@ -1363,7 +1363,7 @@ Next review date: [DD/MM/YYYY]
 
 ---
 
-### 📊 Incident Metrics Tracking
+###  Incident Metrics Tracking
 
 CipherPay Ltd should track the following metrics
 across all incidents to measure improvement over time:
@@ -1381,7 +1381,7 @@ across all incidents to measure improvement over time:
 
 ---
 
-### 📈 Incident Trend Analysis
+###  Incident Trend Analysis
 
 **Monthly incident review should track:**
 
@@ -1402,7 +1402,7 @@ across all incidents to measure improvement over time:
 
 ---
 
-### 🔄 Continuous Improvement Cycle
+###  Continuous Improvement Cycle
     ┌─────────────────┐
     │   INCIDENT      │
     │   OCCURS        │
@@ -1442,7 +1442,7 @@ across all incidents to measure improvement over time:
 
 ---
 
-### 🗓️ Playbook Review Schedule
+###  Playbook Review Schedule
 
 This playbook must be reviewed and updated regularly
 to remain effective and relevant:
@@ -1457,7 +1457,7 @@ to remain effective and relevant:
 
 ---
 
-### ✅ Playbook Maintenance Checklist
+###  Playbook Maintenance Checklist
 
 **Every 6 months verify:**
 
@@ -1476,7 +1476,7 @@ to remain effective and relevant:
 
 ---
 
-## 🎯 Conclusion
+##  Conclusion
 
 ---
 
@@ -1506,7 +1506,7 @@ Plan which was rated as a **Critical Risk (R-003)**.
 
 ---
 
-### 📊 Security Posture Impact
+###  Security Posture Impact
 
 Implementing this playbook directly addresses the
 following findings from the CipherPay Security Audit:
@@ -1532,7 +1532,7 @@ following findings from the CipherPay Security Audit:
 
 ---
 
-### 🚀 Recommended Next Steps
+###  Recommended Next Steps
 
 To further strengthen CipherPay Ltd's incident
 response capability the following next steps are
@@ -1559,7 +1559,7 @@ recommended:
 
 ---
 
-### 🔗 Related Documents
+###  Related Documents
 
 | Document | Description | Link |
 |----------|-------------|------|
@@ -1571,7 +1571,7 @@ recommended:
 
 ---
 
-### 📜 Document Control
+###  Document Control
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
@@ -1602,7 +1602,7 @@ April 2026
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Alex Ojo**
 Cybersecurity Student | SOC & GRC Analyst Trainee
